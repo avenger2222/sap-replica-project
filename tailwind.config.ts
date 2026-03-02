@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +50,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        sap: {
+          blue: "hsl(var(--sap-blue))",
+          "dark-blue": "hsl(var(--sap-dark-blue))",
+          "light-blue": "hsl(var(--sap-light-blue))",
+          navy: "hsl(var(--sap-navy))",
+          gold: "hsl(var(--sap-gold))",
+          green: "hsl(var(--sap-green))",
+          "gray-100": "hsl(var(--sap-gray-100))",
+          "gray-200": "hsl(var(--sap-gray-200))",
+          "gray-500": "hsl(var(--sap-gray-500))",
+          "gray-700": "hsl(var(--sap-gray-700))",
+          "gray-900": "hsl(var(--sap-gray-900))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -65,25 +81,22 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "scroll-logos": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scroll-logos": "scroll-logos 30s linear infinite",
       },
     },
   },
