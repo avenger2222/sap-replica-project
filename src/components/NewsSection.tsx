@@ -1,33 +1,33 @@
-import { Calendar, BookOpen, Lightbulb } from "lucide-react";
+import { FileText, BookOpen, Video, Newspaper } from "lucide-react";
 
-const newsItems = [
+const resources = [
   {
-    icon: Calendar,
-    tag: "EVENT",
-    title: "Annual Enterprise Innovation Summit",
-    description: "Join our flagship event and discover how AI, data, and apps work together across your entire business to drive real results.",
-    link: "Register now",
+    icon: FileText,
+    tag: "CASE STUDY",
+    title: "How a Global Manufacturer Cut Lead Times by 40%",
+    description: "Discover how Srichakra's agile consulting and automation suite transformed manufacturing operations.",
+    link: "Read the case study",
   },
   {
     icon: BookOpen,
-    tag: "E-BOOK",
-    title: "Start Your AI Journey",
-    description: "Learn what it takes to assess your AI readiness, build confidence, and take measurable steps toward long-term value.",
-    link: "Read the e-book",
+    tag: "WHITEPAPER",
+    title: "The Enterprise Guide to Intelligent Automation",
+    description: "A comprehensive look at RPA, document processing, and workflow automation for large-scale operations.",
+    link: "Download the whitepaper",
   },
   {
-    icon: Lightbulb,
+    icon: Video,
+    tag: "VIDEO",
+    title: "Digital Transformation in Action",
+    description: "Watch how enterprises are leveraging cloud migration and data modernization to gain competitive advantage.",
+    link: "Watch now",
+  },
+  {
+    icon: Newspaper,
     tag: "ARTICLE",
-    title: "Understanding Embedded AI",
-    description: "Discover how embedded AI streamlines work by connecting data and decisions inside the systems you already use.",
+    title: "5 Steps to Building an Agile Enterprise",
+    description: "Learn the key strategies for embedding agility into every layer of your organization.",
     link: "Read the article",
-  },
-  {
-    icon: Calendar,
-    tag: "EVENT",
-    title: "The Fabric of Data & AI",
-    description: "Join industry leaders at this virtual event to see how a business data fabric powers trusted, context-rich AI.",
-    link: "Register now",
   },
 ];
 
@@ -35,11 +35,14 @@ const NewsSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="max-w-[1400px] mx-auto px-6">
-        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-8">
-          What's new
+        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">
+          Resources
         </p>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+          Featured Resources
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {newsItems.map((item, i) => (
+          {resources.map((item, i) => (
             <div
               key={i}
               className="rounded-xl overflow-hidden border border-border sap-card-hover bg-background"
